@@ -10,7 +10,8 @@ def Theme(number):
 
     themes = [
         '#0041F3',
-        'Black'
+        'Black',
+        'yellow'
     ]
 
     return themes[number]
