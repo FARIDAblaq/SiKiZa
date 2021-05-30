@@ -1,5 +1,11 @@
+from flask import Flask, render_template, request, url_for,redirect
 from os import error
 import sqlite3
+from sqlite3.dbapi2 import Cursor
+
+
+
+
 try:
     connection = sqlite3.connect('SikiZa.db')
     cursor = connection.cursor()
@@ -11,13 +17,31 @@ try:
                             email TEXT NOT NULL                       
     )"""
     # query = "DROP TABLE users"
-    # query = """ INSERT INTO interns (user_id,first_name,last_name,email)
-    #          VALUES(1, "Chantelle" , "Osafo", "cosafo@gmail.com", "+2330241578805", "Ashesi University")"""
-    
     cursor.execute(query)
+
     # print ("Table Sucessfully created")
 except connection.Error as error:
-    print("Error creating Table" , error)
-finally:
-    if connection:
+    print("Error creating  into Table" , error)
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def open_form():
+    return render_template('templates/api_request.html')
+
+@app.route('/insert', methods = ['POST', 'GET'])
+def insertdata():
+    if request.method == 'POST':
+        f_name = request.form['fname']
+        l_name = request.form['lname']
+        email = request.form['email']
+        query1 = """ INSERT INTO users (user_id,first_name,last_name,email)
+                VALUES(?,?,?,?)"""
+        cursor.execute(query1, f_name,l_name,email)
+        connection.commit()
+        print("inserted successfully")
         connection.close()
+
+
+        
