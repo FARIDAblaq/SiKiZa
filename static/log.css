@@ -8,12 +8,17 @@ body {
 
 .first_half {
     width: 390px;
-    background-color: rgb(214, 214, 241);
-    height: 310px;
+    background-color: rgb(255, 255, 255);
+    height:450px;
     margin: auto;
-    border-radius: 10px;
-    margin-top: 50px;
-    box-shadow: 3px 2px 3px 2px #888787;
+    border-radius: 5px;
+    top:0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    left:50%;
+    right:0;
+    box-shadow: 3px 2px 3px 2px #a5a5a5;
 }
 
 form {
@@ -31,12 +36,14 @@ h2 {
 
 input {
     display: block;
-    padding: 9px;
+    height: 25px;
+    padding: 10px;
     width: 300px;
     border-radius: 5px;
     margin-bottom: 12px;
     border: 0ch;
     margin-top: 10px;
+    background-color: rgb(221, 221, 221);
 }
 
 input:hover {
@@ -54,12 +61,14 @@ button {
     margin-bottom: 15px;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    height: 50px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: beige;
-    width: 300px;
-    font-size: 18px;
+    background-color: #1856ff;
+
 }
 
 
