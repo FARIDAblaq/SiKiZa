@@ -50,7 +50,7 @@ def new_request():
                 conn.commit()
                 msg = 'Thank you for registering with SiKiZa'
             
-            # return render_template('results.html',message = msg,uname = firstname)
+            return render_template('results.html',message = msg,uname = firstname)
                
 
         except:
