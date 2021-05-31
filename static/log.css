@@ -8,6 +8,19 @@ body {
 .he{
    margin: 40px;
 }
+.success-message{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    top:0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    left:0;
+    box-shad
+    right:0;
+}
+.success-message
 .first_half {
     width: 390px;
     background-color: rgb(255, 255, 255);
