@@ -1,5 +1,4 @@
 from flask import Flask,render_template 
-from modules import config
 
 sikiza = Flask(__name__)  # initialize sikiza
 
