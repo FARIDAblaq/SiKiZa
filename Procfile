@@ -1,1 +1,1 @@
-web gunicorn application:sikiza
+web gunicorn server:sikiza
