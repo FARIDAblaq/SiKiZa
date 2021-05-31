@@ -9,16 +9,29 @@ body {
    margin: 40px;
 }
 .success-message{
+    
     height: 300px;
-    width: 300px;
-    background-color: white;
-    top:0;
-    bottom: 0;
-    position: absolute;
-    margin: auto;
-    left:0;
-    right:0;
+    margin-top: 100px;
+    background-color:#0041F3 ;
+    margin-left: 30%;
+    margin-right:30% ;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 5px 5px 15px 15px#e2e2e2;
+    
 }
+
+h1{
+    padding-top: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.btn{
+    width: 80px;
+    background-color: rgb(236, 235, 235);
+}
+
 .first_half {
     width: 390px;
     background-color: rgb(255, 255, 255);
