@@ -9,19 +9,23 @@ from sqlite3.dbapi2 import Cursor
 try:
     connection = sqlite3.connect('SikiZa.db')
     cursor = connection.cursor()
-    # #query = """SELECT sqlite_version()"""
+    
     query = """ CREATE TABLE IF NOT EXISTS users (
                             user_id INTEGER AUTO_INCREMENT PRIMARY KEY,
                             first_name TEXT NOT NULL,
                             last_name TEXT NOT NULL,
                             email TEXT NOT NULL                       
     )"""
+
+   
+    
     # query = "DROP TABLE users"
     cursor.execute(query)
 
     # print ("Table Sucessfully created")
+
 except connection.Error as error:
-    print("Error creating  into Table" , error)
+    print("Error creating Table" , error)
 
 
 app = Flask(__name__)

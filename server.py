@@ -4,14 +4,17 @@ sikiza = Flask(__name__)  # initialize sikiza
 
 
 @sikiza.route('/')
-def IntroPage():
+def Intro_Page():
     return render_template('index.html')
 
 
-
 @sikiza.route('/home')
-def HomePage():
+def Home_Page():
     return render_template('home.html')
+
+@sikiza.route('/api_request')
+def api_request():
+    return render_template('api_request.html')
 
 
 
