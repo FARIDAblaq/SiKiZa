@@ -5,7 +5,9 @@ body {
 
 
 /* API request */
-
+.he{
+   margin: 40px;
+}
 .first_half {
     width: 390px;
     background-color: rgb(255, 255, 255);
@@ -18,7 +20,7 @@ body {
     margin: auto;
     left:50%;
     right:0;
-    box-shadow: 3px 2px 3px 2px #a5a5a5;
+    box-shadow: 0.001rem 0.001rem 15px rgb(161, 161, 161);
 }
 
 form {
