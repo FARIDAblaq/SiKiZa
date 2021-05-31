@@ -8,10 +8,13 @@ def Intro_Page():
     return render_template('index.html')
 
 
-
 @sikiza.route('/home')
 def Home_Page():
     return render_template('home.html')
+
+@sikiza.route('/api_request')
+def api_request():
+    return render_template('api_request.html')
 
 
 
