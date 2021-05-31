@@ -1,4 +1,16 @@
-from flask import Flask,render_template 
+from flask import Flask, render_template, url_for, request, redirect
+
+from sqlite3.dbapi2 import connect
+import sqlite3 
+from sqlite3 import Error
+
+
+conn = sqlite3.connect('req.db')
+print("connected to database")
+sql_create_users_table = 'CREATE TABLE IF NOT EXISTS users (id integer PRIMARY KEY, firstname text NOT NULL, lastname text NOT NULL,email text NOT NULL);'
+conn.execute(sql_create_users_table)
+print("table created succcesfully")
+
 
 sikiza = Flask(__name__)  # initialize sikiza
 
@@ -12,12 +24,42 @@ def Intro_Page():
 def Home_Page():
     return render_template('home.html')
 
+
 @sikiza.route('/api_request')
 def api_request():
     return render_template('api_request.html')
 
 
+@sikiza.route('/new')
+def api():
+    return render_template('api_request.html')
 
+
+@sikiza.route('/new_request', methods=['POST', 'GET'])
+def new_request():
+    if request.method == 'POST':
+        try:
+            firstname = request.form['fname']
+            lastname = request.form['lname']
+            email = request.form['email']
+
+            with sqlite3.connect('req.db') as conn:
+                cur = conn.cursor()
+                cur.execute(
+                    "INSERT INTO USERS (firstname,lastname,email) VALUES (?,?,?)", (firstname, lastname, email))
+                conn.commit()
+                msg = 'Thank you for registering with SiKiZa'
+            
+            return render_template('results.html',message = msg)
+               
+
+        except:
+            conn.rollback()
+            msg = 'error inserting data'
+
+        finally:
+            return render_template("results.html", msg=msg)
+            conn.close()
 
 
 if __name__ == '__main__':

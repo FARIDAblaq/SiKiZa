@@ -18,7 +18,6 @@ sikiza = Flask(__name__)
 def Intro_Page():
     return render_template('index.html')
 
-
 @sikiza.route('/home')
 def Home_Page():
     return render_template('home.html')
