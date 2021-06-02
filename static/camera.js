@@ -5,6 +5,7 @@
 
     
     const URL = "https://teachablemachine.withgoogle.com/models/sbLyo8ssx/";
+    // added some changes
 
     let model, webcam, labelContainer, maxPredictions;
     const stopbutt = document.getElementById('stop')
