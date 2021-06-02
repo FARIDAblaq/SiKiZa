@@ -4,7 +4,7 @@
     // GLOBAL VARIABLES
 
     
-    const URL = "https://teachablemachine.withgoogle.com/models/mzmMUyGLr/";
+    const URL = "https://teachablemachine.withgoogle.com/models/sbLyo8ssx/";
 
     let model, webcam, labelContainer, maxPredictions;
     const stopbutt = document.getElementById('stop')
