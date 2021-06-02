@@ -72,12 +72,12 @@ body{
   position: absolute;
 }
 .title-1{
-    font-size:30px;
+    font-size:40px;
     font-weight: bolder;
     margin-top: 20px;
     margin-left: 50px;
     /* border: 1px solid; */
-    width: 50%;
+    width: 60%;
     color: white;
 }
 p{
